@@ -1,0 +1,74 @@
+/* general rules */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+    height: 100%;
+}
+
+/* body rules */
+
+/* main container rules */
+
+.main-container {
+    display: flex;
+    height: 100%;
+}
+
+/* navbar rules */
+
+.navbar {
+    background-color: red;
+    width: 20%;
+    height: 100%;
+}
+
+
+
+/* right column rules */
+
+.right-column {
+    background-color: darkblue;
+    height: 100%;
+    width: 100%;
+    margin-top: 4em;
+}
+
+
+.upgrade-div {
+    width: 100%;
+    background-color: rgba(0, 100, 0, 0.5);
+    height: 4em;
+    position: fixed;
+    top: 0;
+    line-height: 4em;
+}
+
+.upgrade-div button {
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+/* footer rules */
+
+footer {
+    height: 5em;
+    width: 100%;
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+}
