@@ -1,3 +1,12 @@
+:root {
+    /* colors */ 
+    --bg-col-right: RGB(18, 18, 18);
+}
+
+
+
+
+
 /* general rules */
 
 * {
@@ -22,9 +31,9 @@ html {
 
 /* body rules */
 
-body {
+/* body {
     height: 100%;
-}
+} */
 
 /* main container rules */
 
@@ -89,7 +98,7 @@ body {
 
 .navbar {
     float: left;
-    width: 15%;
+    width: 230px;
     height: 100%;
     background-color: black;
 }
@@ -103,9 +112,39 @@ body {
 .navbar-bottom {
     width: 100%;
     height: 80px;
-    background-color: red;
+    padding: 0 16px;
 }
 
+.installa-app {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}
+
+.navbar-bottom .installa-app a i,
+.navbar-bottom .installa-app a span{
+    display: inline-block;
+    font-size: 0.8em;
+    color: grey;
+    text-decoration: none;
+    margin-right:7px;
+}
+
+
+.navbar-bottom .profile a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-bottom .profile a i {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.profile .navbar-bottom-profile-text {
+    color: white;
+}
 
 /* playlist rules */
 
@@ -146,8 +185,7 @@ h3 {
 }
 
 .playlist ul {
-   list-style: none;
-   
+   list-style: none;   
 }
 
 
@@ -176,7 +214,7 @@ h3 {
 
 /* call to action rules */
 .upgrade-div {
-    width: 85%;
+    width: calc(100% - 230px);
     height: 90px;
     background-color: RGB(10, 10, 10);
     position: fixed;
@@ -234,7 +272,22 @@ footer {
         display: none;
     }
 
+    .page-selection ul li a i{
+        color: white;
+        font-size: 25px;
+        display: inline-block;
+        margin-left: -10px;        
+    }
+
+    .fa-grip-lines-vertical:before {
+        margin-left: 5px;
+    }
+
     .upgrade-div {
         width: calc(100% - 50px);
+    }
+
+    .logo img {
+        display: none;
     }
 }
