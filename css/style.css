@@ -101,6 +101,7 @@
     width: 230px;
     height: 100%;
     background-color: black;
+    overflow: hidden;
 }
 
 
@@ -118,6 +119,7 @@
 .installa-app {
     border-bottom: 1px solid grey;
     padding-bottom: 10px;
+    background-color: black;
 }
 
 .navbar-bottom .installa-app a i,
@@ -151,7 +153,10 @@
 .playlist {
     padding: 0 1em;
     margin-left: 0.3em;
+    height: 270px;
+    overflow-y: scroll;
 }
+
 
 h3 {
     font-size: 1.1em;
@@ -407,8 +412,143 @@ footer {
     height: 90px;
     width: 100%;
     background-color: RGB(50, 50, 50);
+}
+
+.footer-left,
+.footer-right {
+    width: 17%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+.footer-left-contained {
+    width: 95%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 9px;
+}
+
+.footer-img {
+    display: inline-block;
+}
+
+.footer-left-contained .footer-img img {
+    width: 50px;
+    margin-top: 10px;
+}
+
+.footer-left-contained h5 {
+    display: inline-block;
+    position: absolute;
+    bottom: 45px;
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.footer-left-contained h6 {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    margin-left: 5px;
+    font-size: 10px;
+    color: grey;
+}
+
+.footer-left-contained .icons {
+    display: inline-block;
+    position: absolute;
+    bottom: 35px;
+    margin-left: 100px;
+}
+
+.footer-left-contained .icons button {
+    background: none;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    color: grey;
+    font-size: 17px;
 
 }
+
+.footer-left-contained .icons button:hover {
+    filter: brightness(5);
+}
+
+
+
+
+.footer-right-contained {
+    width: 95%;
+    height: 30%;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.footer-right-contained a {
+    color: white;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+
+.footer-right-contained a:hover {
+    filter: opacity(8);
+}
+
+.slidecontainer {
+    display: inline-block;
+
+}
+
+.first-slider {
+    height: 4px;
+    width: 110px;
+    margin-bottom: 2px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.second-slider {
+    display: none;
+    height: 4px;
+    width: 110px;
+    margin-bottom: 2px;
+    background-color: var(--spotify-green);
+    border-radius: 10px;
+}
+
+.slidecontainer:hover .first-slider {
+    display: none;
+    cursor: pointer;
+}
+
+.slidecontainer:hover .second-slider {
+    display: block;
+    cursor: pointer;
+}
+
+
+
+
+
+.footer-center {
+    width: 66%;
+    height: 100%;
+    background-color:lightblue;
+    float: left;
+}
+
+.footer-center-contained {
+    width: 60%;
+    height: 90%;
+    background-color: orange;
+    margin: 5px auto;
+}
+
+/* media query */
 
 
 @media screen and (max-width: 1100px) {
