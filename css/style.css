@@ -478,8 +478,6 @@ footer {
 }
 
 
-
-
 .footer-right-contained {
     width: 95%;
     height: 30%;
@@ -500,7 +498,6 @@ footer {
 
 .slidecontainer {
     display: inline-block;
-
 }
 
 .first-slider {
@@ -533,7 +530,6 @@ footer {
 
 
 
-
 .footer-center {
     width: 66%;
     height: 100%;
@@ -544,8 +540,41 @@ footer {
 .footer-center-contained {
     width: 60%;
     height: 90%;
-    background-color: orange;
     margin: 5px auto;
+}
+
+.footer-center-contained-top {
+    height: 50%;
+    width: 100%;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.footer-center-contained-top ul {
+    list-style: none;
+    text-align: center;
+}
+
+.footer-center-contained-top ul :nth-child(3) {
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.footer-center-contained-top ul li {
+    display: inline-block;
+    padding: 0 0.5em;
+    font-size: 17px;
+}
+
+.footer-center-contained-top ul li a {
+    color: white;
+}
+
+.footer-center-contained-bottom {
+    height: 50%;
+    width: 100%;
+    background-color: crimson;
+    margin: 0 auto;
 }
 
 /* media query */
