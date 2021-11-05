@@ -111,9 +111,11 @@
 }
 
 .navbar-bottom {
-    width: 100%;
+    width: 230px;
     height: 80px;
     padding: 0 16px;
+    background-color: black;
+    position: sticky;
 }
 
 .installa-app {
@@ -508,6 +510,8 @@ footer {
     border-radius: 10px;
 }
 
+
+
 .second-slider {
     display: none;
     height: 4px;
@@ -533,7 +537,6 @@ footer {
 .footer-center {
     width: 66%;
     height: 100%;
-    background-color:lightblue;
     float: left;
 }
 
@@ -546,7 +549,6 @@ footer {
 .footer-center-contained-top {
     height: 50%;
     width: 100%;
-    background-color: red;
     margin: 0 auto;
 }
 
@@ -573,9 +575,57 @@ footer {
 .footer-center-contained-bottom {
     height: 50%;
     width: 100%;
-    background-color: crimson;
     margin: 0 auto;
 }
+
+.big-volume {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    color: white;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.first-volume-big {
+    height: 4px;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.second-volume-big {
+    display: none;
+    height: 4px;
+    background-color: var(--spotify-green);
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+.big-volume:hover .first-volume-big{
+    display: none;
+    cursor: pointer;
+}
+
+.big-volume:hover .second-volume-big {
+    display: block;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 /* media query */
 
