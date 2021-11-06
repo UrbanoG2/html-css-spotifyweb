@@ -664,7 +664,10 @@ footer {
         width: 15vw;
         height: 15vw;
     }
-
+    
+    .card-container {
+        height: 120px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -728,8 +731,8 @@ footer {
     }
 
     .album-img {
-        height: 175px;
-        width: 175px;
+        height: 200px;
+        width: 200px;
         background-size: cover;
     }
 
@@ -743,6 +746,7 @@ footer {
 
     .card-container {
         margin-bottom: 0;
+        height: 250px;
     }
 
     .card-container #text-left {
