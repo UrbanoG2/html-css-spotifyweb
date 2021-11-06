@@ -5,9 +5,6 @@
 }
 
 
-
-
-
 /* general rules */
 
 * {
@@ -42,20 +39,22 @@
     height: calc(100vh - 90px);
 }
 
-
-
 /* logo rules */
 
 .logo {
     height: 5em;
     background-color: black;
     padding-top: 1em;
+    margin-left: 20px;
 }
 
-.logo img {
+.logo img:nth-child(1){
     height: 3em;
-    margin-left: 1.5em;
     margin: 0 auto;
+}
+
+.logo img:nth-child(2) {
+    display: none;
 }
 
 /* home buttons rule */
@@ -113,7 +112,7 @@
 .navbar-bottom {
     width: 230px;
     height: 80px;
-    padding: 0 16px;
+    padding: 0 10px;
     background-color: black;
     position: sticky;
 }
@@ -223,6 +222,8 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    z-index: 999;
+
 }
 
 #upgrade {
@@ -237,6 +238,7 @@ h3 {
 
 #upgrade:hover {
     filter: brightness(3);
+    transform: scale(1.2);
 }
 
 /* right column rules */
@@ -288,8 +290,9 @@ h3 {
 .recently-played-card-container {
     margin: 0 15px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
+
 
 h1 {
     margin: 0 1em;
@@ -304,9 +307,13 @@ h1 {
     margin: 2em 1em;
 }
 
+.card-container #text-left {
+    text-align: left;
+}
+
 .album-img {
-    height: 175px;
-    width: 175px;
+    height: 9vw;
+    width: 9vw;
     background-image: url(../img/metal_lifting.jpg);
     background-size: contain;
 }
@@ -435,6 +442,10 @@ footer {
     display: inline-block;
 }
 
+.footer-img:hover {
+    cursor: pointer;
+}
+
 .footer-left-contained .footer-img img {
     width: 50px;
     margin-top: 10px;
@@ -457,6 +468,13 @@ footer {
     font-size: 10px;
     color: grey;
 }
+
+.footer-left-contained h5:hover,
+.footer-left-contained h6:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 .footer-left-contained .icons {
     display: inline-block;
@@ -495,7 +513,7 @@ footer {
 
 
 .footer-right-contained a:hover {
-    filter: opacity(8);
+    color: var(--spotify-green);
 }
 
 .slidecontainer {
@@ -572,6 +590,10 @@ footer {
     color: white;
 }
 
+.footer-center-contained-top ul li a:hover {
+    color: var(--spotify-green);
+}
+
 .footer-center-contained-bottom {
     height: 50%;
     width: 100%;
@@ -622,11 +644,6 @@ footer {
 
 
 
-
-
-
-
-
 /* media query */
 
 
@@ -635,7 +652,19 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-    
+    h3 {
+        font-size: 0.6em;
+    }
+
+    .subtitle {
+        font-size: 0.5em;
+    }
+
+    .album-img {
+        width: 15vw;
+        height: 15vw;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -653,11 +682,22 @@ footer {
         display: none;
     }
 
+    .page-selection {
+        padding-top: 0;
+    }
+
     .page-selection ul li a i{
         color: white;
         font-size: 25px;
         display: inline-block;
-        margin-left: -10px;        
+    }
+
+    .page-selection ul li a {
+        padding-left: 2px;
+    }
+
+    .page-selection ul li a i:hover {
+        color: var(--spotify-green);
     }
 
     .fa-grip-lines-vertical:before {
@@ -668,11 +708,44 @@ footer {
         width: calc(100% - 50px);
     }
 
-    .navbar-bottom .profile a i {
-        margin-left: -5 px;
+    .logo {
+        margin-left: 0;
     }
 
-    .logo img {
+    .logo img:nth-child(1) {
         display: none;
+    }
+
+    .logo img:nth-child(2) {
+        display: block;
+        margin-right: 2px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .logo img:nth-child(2):hover {
+        cursor: pointer;
+    }
+
+    .album-img {
+        height: 175px;
+        width: 175px;
+        background-size: cover;
+    }
+
+    .recently-played-card-container {
+        flex-wrap: wrap;
+    }
+
+    .page-selection ul li a:hover {
+        border: none;
+    }
+
+    .card-container {
+        margin-bottom: 0;
+    }
+
+    .card-container #text-left {
+        text-align: center;
     }
 }
